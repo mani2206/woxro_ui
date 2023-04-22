@@ -1,0 +1,138 @@
+
+.header {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    inset: 0 91% 0 0;
+    background-color: hsl(0deg 0% 100%);
+	box-shadow: -4px 1px 7px 1px gray;
+}
+
+.header-mobile {
+    display: flex;
+    // position: fixed;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    height: 120vh;
+    background-color: #ffffff00;
+	box-shadow: -4px 1px 7px 1px gray;
+    @include media-min-md-x{
+        inset: 0 44rem 0 0;
+    }
+    @include media-min-lg-x{
+        inset: 0 59rem 0 0;
+    }
+    @include media-min-xl{
+        inset: 0 76rem 0 0;
+    }
+    @include media-min-xl-x{
+        inset: 0 83rem 0 0;
+    }
+    @include media-min-xxl{
+        inset: 0 87rem 0 0;
+    }
+	@media only screen and (min-width: 2560px){
+        inset: 0 147rem 0 0 !important;
+    }
+}
+
+nav .ul-item {
+    display: flex;
+    flex-direction: column;
+    margin-block: .5rem;
+    list-style: none;
+    padding-left: 2px;
+	margin-top: 11px;
+    @media screen and (min-width:2560px) {
+        margin-top: 89px;
+    }
+}
+
+nav .ul-item.itemlist a {
+    display: none;
+}
+
+
+nav .ul-item.itemlist li::after {
+    content: '';
+    position: absolute;
+    width: 1%;
+    height: 4%;
+    background-color: #fff;
+    right: 0;
+    
+}
+.Sidebar_icon{
+    padding: 1px 14px 0px 14px;
+}
+nav .ul-item li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-block: 1.2rem;
+    margin-block: .1rem;
+	font-size: 10px;
+}
+
+nav .ul-item li:hover {
+    // border-radius: 11px;
+    // border: 3px solid green;
+    background-color: rgb(233 236 239 / 64%);
+}
+
+nav .ul-item li .icon {
+	color: #aaa;
+    margin-inline: 1rem;
+    font-size: 30px;
+}
+
+nav .ul-item li a {
+    text-transform: uppercase;
+    text-decoration: none;
+	color: #aaaaaa;
+    margin-top: 9px;
+    font-weight: 800;
+}
+.menu-icon {
+    margin-inline: 1rem;
+	margin-top: 23px;
+}
+
+.menu-icon .menu {
+	color: #aaa;
+    margin-block: 1rem;
+    cursor: pointer;
+	font-size: 40px;
+}
+
+nav .ul-item li:hover {
+    transition: 1s ease;
+}
+
+
+@media (max-width:765px) {
+    .header-mobile {
+       display: none;
+    }   
+}
+
+
+/* === Side Navbar Start === */	
+.sidebar-wrapper{ 
+	display: grid;
+	place-items: center;
+	.Hamburger-icon{
+		font-weight: 100;
+	}
+} 
+/* === Side Navbar End === */
+
+nav{
+	.offcanvas{
+		width: 127px !important;
+	}
+	.navbar-toggler{
+		border: none !important;
+	}
+}

@@ -1,0 +1,18 @@
+// Start : Header section
+.banner_image{
+    width:165px;
+    padding:15px;
+    @include media-min-md{
+        width: 30%;
+    }
+
+}
+.header-color{
+    background-color: black;
+}
+
+// End : Header Section
+
+
+
+
